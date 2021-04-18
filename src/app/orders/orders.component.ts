@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../order';
-import { ORDERS } from '../mock-orders';
+import { OrderService } from '../order.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-orders',
@@ -9,14 +10,25 @@ import { ORDERS } from '../mock-orders';
 })
 export class OrdersComponent implements OnInit {
 
-  orders = ORDERS;
+  orders: Order[] = [];
   selectedOrder?: Order;
 
   onSelect(order: Order): void {
     this.selectedOrder = order;
+    this.messageService.add(`OrdersComponent: Selected order job_number=${order.job_number}`);
   }
-  
-  constructor() { }
 
-  ngOnInit() { }
+  getOrders(): void {
+    this.orderService.getOrders()
+    .subscribe(orders => this.orders = orders);
+  }
+    
+  constructor(
+    private orderService: OrderService,
+    private messageService: MessageService
+  ) { }
+
+  ngOnInit() {
+    this.getOrders();
+  }
 }

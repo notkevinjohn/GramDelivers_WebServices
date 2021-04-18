@@ -18,6 +18,7 @@ import { ManifestsComponent } from './manifests/manifests.component';
 import { OrdersComponent } from './orders/orders.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
+import { MessagesComponent } from './messages/messages.component';
   
 @NgModule({
   imports:
@@ -41,7 +42,8 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     ManifestsComponent,
     OrdersComponent,
     VehiclesComponent,
-    OrderDetailComponent
+    OrderDetailComponent,
+    MessagesComponent
   ],
   bootstrap:    [ AppComponent ]
 })
