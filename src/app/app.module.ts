@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 /*import { MatCardHarness } from '@angular/material/card/testing';*/
 
 /* user defined */
@@ -30,7 +31,8 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     MatCardModule,
     MatGridListModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatDividerModule
 /*    MatCardHarness*/
   ],
   declarations:

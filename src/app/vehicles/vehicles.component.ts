@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Vehicle } from '../vehicle';
+import { VEHICLES } from '../mock-vehicles';
 
 @Component({
   selector: 'app-vehicles',
@@ -8,10 +9,7 @@ import { Vehicle } from '../vehicle';
 })
 export class VehiclesComponent implements OnInit {
 
-  vehicle: Vehicle = {
-    id: 23,
-    name: 'pontiac'
-  };
+  vehicles = VEHICLES;
   
   constructor() { }
 

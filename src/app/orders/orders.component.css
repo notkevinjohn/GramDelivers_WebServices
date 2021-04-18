@@ -59,8 +59,7 @@ input {
     display: table-row;
 }
 .table-cell {
-/*    border: 1px solid;*/
     display: table-cell;
     padding: 0 0 0 20px;
-    width: 5000px;
+    width: 100;
 }

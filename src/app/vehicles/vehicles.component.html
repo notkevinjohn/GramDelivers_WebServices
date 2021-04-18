@@ -1,11 +1,19 @@
-<mat-card>
-<h2>{{vehicle.name | uppercase}} Details</h2>
-<div><span>id: </span>{{vehicle.id}}</div>
-<form class="vehicle">
-  <mat-form-field class="full-width" placeholder="Name">
-    <mat-label>Name:</mat-label>
-    <input matInput name="vehicle.name" #name="ngModel"  [(ngModel)]="vehicle.name" placeholder="name">
-  </mat-form-field>
-  <button mat-raised-button color="primary">Update</button>
-</form>
+<mat-card *ngFor="let vehicle of vehicles" class="vehicle">
+  <mat-card-header>
+    <mat-card-title>{{vehicle.name | uppercase}}</mat-card-title>
+  </mat-card-header>
+  <mat-divider [inset]="true"></mat-divider>
+  <mat-card-content>
+    <div><span>id: </span>{{vehicle.id}}</div>
+  </mat-card-content>
+
+  <form class="vehicle">
+    <mat-form-field class="full-width" placeholder="Name">
+      <mat-label>Name:</mat-label>
+      <input matInput name="vehicle.name" #name="ngModel"  [(ngModel)]="vehicle.name" placeholder="name">
+    </mat-form-field>
+  </form>
+  <mat-card-actions>
+    <button mat-raised-button color="primary">Update</button>
+  </mat-card-actions>
 </mat-card>

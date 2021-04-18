@@ -1,9 +1,27 @@
 <div *ngIf="order">
-
-  <h2>{{order.contact_name | uppercase}} Order Details</h2>
-  <div><span>job: </span>{{order.job_number}}</div>
-  <div>
-    {{order.contact_name}}
-  </div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{order.contact_name | uppercase}} Order Details</mat-card-title>
+    </mat-card-header>
+    <mat-divider [inset]="true"></mat-divider>
+    <mat-card-content>
+    <div><span>job: </span>{{order.job_number}}</div>
+    <div>
+      Contact name: {{order.contact_name}}
+    </div>
+    
+    <div class="location">
+      <h3>Pickup:</h3>
+      <div>Location: {{order.requested_pickup_location}}</div>
+      <div>Latitude: {{order.requested_pickup_latitude}}</div>
+      <div>Longtiude: {{order.requested_pickup_longtiude}}</div>
+    </div>
+    <div class="location">
+      <h3>Dropoff</h3>
+      <div>Location: {{order.requested_dropoff_location}}</div>
+      <div>Latitude: {{order.requested_dropoff_latitude}}</div>
+      <div>Longtiude: {{order.requested_dropoff_longtiude}}</div>
+    </div>
+    </mat-card-content>
+  </mat-card>
 </div>
-
