@@ -1,4 +1,16 @@
-<h1>{{title}}</h1>
-<app-manifests></app-manifests>
-<app-orders></app-orders>
-<app-vehicles></app-vehicles>
+<mat-toolbar>
+  <button mat-icon-button aria-label="menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{title}}</span>
+</mat-toolbar>
+
+<mat-grid-list cols="4">
+  <mat-grid-tile class="orders" [colspan]=3 [rowspan]=2>
+    <!--    <app-manifests></app-manifests>-->
+    <app-orders></app-orders>
+  </mat-grid-tile>
+  <mat-grid-tile class="vehicles" [colspan]=1 [rowspan]=2>
+    <app-vehicles></app-vehicles>
+  </mat-grid-tile>
+</mat-grid-list>

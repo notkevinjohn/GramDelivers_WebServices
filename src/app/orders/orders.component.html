@@ -1,16 +1,19 @@
-<h2>Orders</h2>
-<ul class="orders">
-  <li *ngFor="let order of orders"
-      [class.selected]="order === selectedOrder"
-      (click)="onSelect(order)">
-    <span class="badge">{{order.job_number}}</span> {{order.contact_name | uppercase}}
-  </li>
-</ul>
-
-<div *ngIf="selectedOrder">
-  <h2>{{selectedOrder.contact_name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedOrder.job_number}}</div>
-  <div>
-    {{selectedOrder.contact_name}}
+<div class="container">
+  <div class="table-row">
+    <div class="table-cell">
+      <h2>Orders</h2>
+      <ul class="orders">
+	<li *ngFor="let order of orders"
+	    [class.selected]="order === selectedOrder"
+	    (click)="onSelect(order)">
+	  <span class="b5adge">{{order.job_number}}</span> {{order.contact_name | uppercase}}
+	</li>
+      </ul>
+    </div>
+    <div class="table-cell">
+      <div id="details">
+	<app-order-detail [order]="selectedOrder"></app-order-detail>
+      </div>
+    </div>
   </div>
 </div>

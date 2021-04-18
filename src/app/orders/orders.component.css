@@ -50,3 +50,17 @@
 input {
   padding: .5rem;
 }
+
+.container {
+    display: table;
+    width: 100%;
+}
+.table-row {
+    display: table-row;
+}
+.table-cell {
+/*    border: 1px solid;*/
+    display: table-cell;
+    padding: 0 0 0 20px;
+    width: 5000px;
+}
