@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Manifest } from '../manifest';
+import { Order } from '../order';
+import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-manifests',
@@ -8,10 +10,9 @@ import { Manifest } from '../manifest';
 })
 export class ManifestsComponent implements OnInit {
 
-  manifest: Manifest = {
-    id: 1,
-    name: '020404142021'
-  };
+  @ViewChild(MatAccordion) accordion: MatAccordion;
+
+  manifest: Manifest = { id: 1, name: '3' };
   
   constructor() { }
 

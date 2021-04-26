@@ -1,0 +1,29 @@
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import * as esri from 'esri-leaflet';
+import * as L from 'leaflet';
+
+@Component({
+  selector: 'app-map',
+  templateUrl: './map.component.html',
+  styleUrls: ['./map.component.css']
+})
+export class MapComponent implements OnInit {
+  //  long -71.17287 lat 41.72907
+  private map;
+
+  private initMap(): void {
+    this.map = L.map('map', {
+      center: [41.72907, -71.17287],
+      zoom: 3
+    });
+  }
+  
+  constructor() { }
+
+  ngOnInit(): void {}
+  
+  ngAfterViewInit(): void {
+    this.initMap();
+  }
+
+}

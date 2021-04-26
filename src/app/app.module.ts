@@ -10,7 +10,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
-/*import { MatCardHarness } from '@angular/material/card/testing';*/
+import { MatExpansionModule } from '@angular/material/expansion';
 
 /* user defined */
 import { AppComponent } from './app.component';
@@ -19,7 +19,8 @@ import { OrdersComponent } from './orders/orders.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-  
+import { MapComponent } from './map/map.component';
+
 @NgModule({
   imports:
   [
@@ -33,8 +34,8 @@ import { MessagesComponent } from './messages/messages.component';
     MatGridListModule,
     MatToolbarModule,
     MatIconModule,
-    MatDividerModule
-/*    MatCardHarness*/
+    MatDividerModule,
+    MatExpansionModule
   ],
   declarations:
   [
@@ -43,7 +44,8 @@ import { MessagesComponent } from './messages/messages.component';
     OrdersComponent,
     VehiclesComponent,
     OrderDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    MapComponent
   ],
   bootstrap:    [ AppComponent ]
 })
