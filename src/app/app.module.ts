@@ -11,7 +11,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MarkerService } from './marker.service';
+import { PopupService } from './popup.service';
+import { ShapeService } from './shape.service';
 /* user defined */
 import { AppComponent } from './app.component';
 import { ManifestsComponent } from './manifests/manifests.component';
@@ -35,7 +38,8 @@ import { MapComponent } from './map/map.component';
     MatToolbarModule,
     MatIconModule,
     MatDividerModule,
-    MatExpansionModule
+    MatExpansionModule,
+    HttpClientModule
   ],
   declarations:
   [
@@ -46,6 +50,11 @@ import { MapComponent } from './map/map.component';
     OrderDetailComponent,
     MessagesComponent,
     MapComponent
+  ],
+  providers: [
+    MarkerService,
+    PopupService,
+    ShapeService
   ],
   bootstrap:    [ AppComponent ]
 })
