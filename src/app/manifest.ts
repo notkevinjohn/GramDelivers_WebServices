@@ -1,4 +1,7 @@
+import { Order } from './order';
+
 export interface Manifest {
   id: number;
-  name: string;
+  file_name: string;
+  orders: Order[];
 }

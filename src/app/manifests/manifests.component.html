@@ -1,17 +1,17 @@
 <mat-accordion multi>
-  <mat-expansion-panel>
+  <mat-expansion-panel *ngFor="let manifest of manifests">
     <mat-expansion-panel-header>
       <mat-panel-title>
-	Manifests
+	{{ manifest.file_name }}
       </mat-panel-title>
       <mat-panel-description>
-	Manifest 1
+	Manifest {{ manifest.id }}
 	<mat-icon>list</mat-icon>
       </mat-panel-description>
     </mat-expansion-panel-header>
   </mat-expansion-panel>
   </mat-accordion>
-<h2>Manifest {{manifest.name}}</h2>
+<!--<h2>Manifest {{manifest.name}}</h2>
 <div><span>id: </span>{{manifest.id}}</div>
-<div><span>name: </span>{{manifest.name}}</div>
+<div><span>name: </span>{{manifest.name}}</div>-->
 
