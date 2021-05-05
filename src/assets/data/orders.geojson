@@ -11,7 +11,7 @@
         ]
       },
       "properties": {
-        "contact_name": "Solar Therapeutics Dispensary",
+        "contact_name": "Ed Dow",
         "requested_dropoff_location": "Solar Therapeutics Dispensary, 1400 Brayton Point Rd, Somerset, MA 02725, United States"
       }
     },
@@ -42,6 +42,90 @@
         "contact_name": "Steve Bowman",
         "requested_dropoff_location": "33 Wales Ave, Avon, MA 02322, United States"
       }
-    }    
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -71.14565 ,
+          41.78184
+        ]
+      },
+      "properties": {
+        "contact_name": "Jeff Currie",
+        "requested_dropoff_location": "259 Lynch Ave, Somerset, MA 02726, United States"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -71.14214 ,
+          41.77004
+        ]
+      },
+      "properties": {
+        "contact_name": "Tom Brady",
+        "requested_dropoff_location": "117 Highview Ave, Somerset, MA 02726, United States"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -71.14601 ,
+          41.75127
+        ]
+      },
+      "properties": {
+        "contact_name": "George Barber",
+        "requested_dropoff_location": "23 Charlotte St, Somerset, MA 02726, United States"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -71.14601 ,
+          41.75127
+        ]
+      },
+      "properties": {
+        "contact_name": "Johnny Wishbone",
+        "requested_dropoff_location": "468 Washington Ave, Somerset, MA 02726"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -71.17847 ,
+          41.73873
+        ]
+      },
+      "properties": {
+        "contact_name": "Warren Kettle",
+        "requested_dropoff_location": "1451 Read St, Somerset, MA 02726, United States"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -71.18549 ,
+          41.72889
+        ]
+      },
+      "properties": {
+        "contact_name": "Gary Fosgobbit",
+        "requested_dropoff_location": "127 Sheraton Ave, Somerset, MA 02725, United States"
+      }
+    }
   ]
 }
