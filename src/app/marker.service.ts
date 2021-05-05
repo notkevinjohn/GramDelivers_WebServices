@@ -34,13 +34,14 @@ export class MarkerService {
 	const lat = c.geometry.coordinates[1];
 	const circle = L.circleMarker([lat, lon], {
 	  radius: 9
-	});
+	}
+	);
 
-	L.marker([lat, lon], {icon: this.navIcon} ).addTo(map);
+	const marker = L.marker([lat, lon], {icon: this.navIcon} ).addTo(map);
 	
-	circle.bindPopup(this.popupService.makePopup(c.properties));
+	marker.bindPopup(this.popupService.makePopup(c.properties));
 	
-	circle.addTo(map);
+//	circle.addTo(map);
       }
     });
   }
