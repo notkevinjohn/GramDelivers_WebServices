@@ -16,13 +16,13 @@ export class MarkerService {
 
 
   navIcon = L.icon({
-    iconUrl: 'assets/images/pin.png',
-    shadowUrl: 'assets/images/shadow.png',
-    iconSize:     [38, 95],
-    shadowSize:   [50, 64],
-    iconAnchor:   [22, 94],
-    shadowAnchor: [4, 62],
-    popupAnchor:  [-3, -76]
+    iconRetinaUrl: 'assets/marker-icon-2x.png',
+    iconUrl: 'assets/marker-icon.png',
+    shadowUrl: 'assets/marker-shadow.png',
+    iconSize:     [25, 41],
+    shadowSize:   [41, 41],
+    iconAnchor:   [12, 41],
+    popupAnchor:  [1, -34]
 });    
 
   
