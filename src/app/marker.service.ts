@@ -28,7 +28,7 @@ export class MarkerService {
 	  radius: 9
 	});
 
-//	circle.bindPopup(this.popupService.makeCapitalPopup(c.properties));
+	circle.bindPopup(this.popupService.makePopup(c.properties));
 	
 	circle.addTo(map);
       }
