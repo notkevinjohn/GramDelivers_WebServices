@@ -93,7 +93,7 @@ private initStatesLayer() {
 
   ngAfterViewInit(): void {
     this.initMap();
-    this.markerService.makeCapitalCircleMarkers(this.map);
+    this.markerService.makeOrderMarkers(this.map);
     this.shapeService.getStateShapes().subscribe(states => {
       this.states = states;
 //      this.initStatesLayer();

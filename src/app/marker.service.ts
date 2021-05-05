@@ -7,19 +7,27 @@ import { PopupService } from './popup.service';
   providedIn: 'root'
 })
 export class MarkerService {
-  capitals: string = '/assets/data/orders.geojson';
+  orders: string = '/assets/data/orders.geojson';
   
   constructor(
     private http: HttpClient,
     private popupService: PopupService
   ) { }
-    
-  static scaledRadius(val: number, maxVal: number): number {
-    return 20 * (val / maxVal);
-  }
+
+
+  navIcon = L.icon({
+    iconUrl: 'assets/images/pin.png',
+    shadowUrl: 'assets/images/shadow.png',
+    iconSize:     [38, 95],
+    shadowSize:   [50, 64],
+    iconAnchor:   [22, 94],
+    shadowAnchor: [4, 62],
+    popupAnchor:  [-3, -76]
+});    
+
   
-  makeCapitalCircleMarkers(map: L.map): void {
-    this.http.get(this.capitals).subscribe((res: any) => {
+  makeOrderMarkers(map: L.map): void {
+    this.http.get(this.orders).subscribe((res: any) => {
       
       for (const c of res.features) {
 	const lon = c.geometry.coordinates[0];
@@ -28,6 +36,8 @@ export class MarkerService {
 	  radius: 9
 	});
 
+	L.marker([lat, lon], {icon: this.navIcon} ).addTo(map);
+	
 	circle.bindPopup(this.popupService.makePopup(c.properties));
 	
 	circle.addTo(map);
