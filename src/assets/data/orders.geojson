@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.17287,
+          41.72907
+        ]
+      },
+      "properties": {
+        "contact_name": "Solar Therapeutics Dispensary",
+        "requested_dropoff_location": "Solar Therapeutics Dispensary, 1400 Brayton Point Rd, Somerset, MA 02725, United States"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14162,
+          41.7513
+        ]
+      },
+      "properties": {
+        "contact_name": "Town of Somerset",
+        "requested_dropoff_location": "140 Wood St, Somerset, MA 02726, United States"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05716,
+          42.14068
+        ]
+      },
+      "properties": {
+        "contact_name": "Steve Bowman",
+        "requested_dropoff_location": "33 Wales Ave, Avon, MA 02322, United States"
+      }
+    }    
+  ]
+}

@@ -7,7 +7,7 @@ import { PopupService } from './popup.service';
   providedIn: 'root'
 })
 export class MarkerService {
-  capitals: string = '/assets/data/usa-capitals.geojson';
+  capitals: string = '/assets/data/orders.geojson';
   
   constructor(
     private http: HttpClient,
@@ -20,17 +20,15 @@ export class MarkerService {
   
   makeCapitalCircleMarkers(map: L.map): void {
     this.http.get(this.capitals).subscribe((res: any) => {
-
-      const maxPop = Math.max(...res.features.map(x => x.properties.population), 0);
       
       for (const c of res.features) {
 	const lon = c.geometry.coordinates[0];
 	const lat = c.geometry.coordinates[1];
 	const circle = L.circleMarker([lat, lon], {
-	  radius: MarkerService.scaledRadius(c.properties.population, maxPop)
+	  radius: 9
 	});
 
-	circle.bindPopup(this.popupService.makeCapitalPopup(c.properties));
+//	circle.bindPopup(this.popupService.makeCapitalPopup(c.properties));
 	
 	circle.addTo(map);
       }

@@ -29,13 +29,13 @@ export class MapComponent implements AfterViewInit {
   
   private initMap(): void {
     this.map = L.map('map', {
-      center: [41.72907, -71.17287],
-      zoom: 6
+      center: [42.14068, -71.05716],
+      zoom: 8
     });
     
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 18,
-      minZoom: 3,
+      maxZoom: 15,
+      minZoom: 1,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
   
@@ -96,7 +96,7 @@ private initStatesLayer() {
     this.markerService.makeCapitalCircleMarkers(this.map);
     this.shapeService.getStateShapes().subscribe(states => {
       this.states = states;
-      this.initStatesLayer();
+//      this.initStatesLayer();
     });
   }
 
