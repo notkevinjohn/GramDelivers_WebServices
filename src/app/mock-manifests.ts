@@ -6,7 +6,7 @@ export const MANIFESTS: Manifest[] = [
     id: 1, file_name: 'm1249.csv',
     orders:
 [
-      {	job_number: 17, driver_id: 7427, contact_name: "Ed Dow", requested_pickup_location: "Solar Therapeutics Dispensary, 1400 Brayton Point Rd, Somerset, MA 02725, USA", requested_pickup_longtiude: -71.17287, requested_pickup_latitude: 41.72907, pickup_datetime: "03/11/2021 @ 12:50", requested_dropoff_location: "Solar Therapeutics Dispensary, 1400 Brayton Point Rd, Somerset, MA 02725, United States", requested_dropoff_longtiude: 41.72907, requested_dropoff_latitude: -71.17287 }
+      {	job_number: 17, driver_id: 7427, contact_name: "Ed Dow", requested_pickup_location: "Solar Therapeutics Dispensary, 1400 Brayton Point Rd, Somerset, MA 02725, USA", requested_pickup_longtiude: -71.17287, requested_pickup_latitude: 41.72907, pickup_datetime: "03/11/2021 @ 12:50", requested_dropoff_location: "Solar Therapeutics Dispensary, 1400 Brayton Point Rd, Somerset, MA 02725, United States", requested_dropoff_longtiude: 41.72907, requested_dropoff_latitude: -71.17287, assigned_route: "red"}
     ]
   },
   {

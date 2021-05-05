@@ -1,6 +1,7 @@
 .location {
     display: inline-block;
-    width: 48%;
+    width: 40%;
     padding: 10px 5px 0 2px;
     min-height: 200px;
+    font-size: 14px;
 }

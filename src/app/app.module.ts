@@ -11,6 +11,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
 import { HttpClientModule } from '@angular/common/http';
 import { MarkerService } from './marker.service';
 import { PopupService } from './popup.service';
@@ -39,6 +41,7 @@ import { MapComponent } from './map/map.component';
     MatIconModule,
     MatDividerModule,
     MatExpansionModule,
+    MatButtonToggleModule,
     HttpClientModule
   ],
   declarations:

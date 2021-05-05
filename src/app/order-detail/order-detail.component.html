@@ -5,22 +5,21 @@
     </mat-card-header>
     <mat-divider [inset]="true"></mat-divider>
     <mat-card-content>
-    <div><span>job: </span>{{order.job_number}}</div>
     <div>
-      Contact name: {{order.contact_name}}
+      Contact name: {{order.contact_name}} <span> Route: {{order.assigned_route}}</span>
     </div>
     
     <div class="location">
-      <h3>Pickup:</h3>
+      Pickup
       <div>Location: {{order.requested_pickup_location}}</div>
-      <div>Latitude: {{order.requested_pickup_latitude}}</div>
-      <div>Longtiude: {{order.requested_pickup_longtiude}}</div>
+<!--      <div>Latitude: {{order.requested_pickup_latitude}}</div>
+      <div>Longtiude: {{order.requested_pickup_longtiude}}</div>-->
     </div>
     <div class="location">
-      <h3>Dropoff</h3>
+      Dropoff
       <div>Location: {{order.requested_dropoff_location}}</div>
-      <div>Latitude: {{order.requested_dropoff_latitude}}</div>
-      <div>Longtiude: {{order.requested_dropoff_longtiude}}</div>
+<!--      <div>Latitude: {{order.requested_dropoff_latitude}}</div>
+      <div>Longtiude: {{order.requested_dropoff_longtiude}}</div>-->
     </div>
     </mat-card-content>
   </mat-card>

@@ -9,4 +9,5 @@ export interface Order {
   requested_dropoff_location: string;
   requested_dropoff_longtiude: number;
   requested_dropoff_latitude: number;
+  assigned_route: string;
 }

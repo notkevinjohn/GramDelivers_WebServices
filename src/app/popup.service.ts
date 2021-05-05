@@ -10,6 +10,7 @@ export class PopupService {
   makePopup(data: any): string {
     return `` +
     `<div>Contact: ${ data.contact_name }</div>` +
-    `<div>State: ${ data.requested_dropoff_location }</div>`
+    `<div>Dropoff Address: ${ data.requested_dropoff_location }</div>` +
+    `<div>Route: red</div>`
   }
 }
