@@ -1,5 +1,6 @@
 <mat-accordion multi>
   <mat-expansion-panel *ngFor="let manifest of manifests">
+    <app-order-list [orders]="manifest.orders"></app-order-list>
     <mat-expansion-panel-header>
       <mat-panel-title>
 	{{ manifest.file_name }}
@@ -10,8 +11,4 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
   </mat-expansion-panel>
-  </mat-accordion>
-<!--<h2>Manifest {{manifest.name}}</h2>
-<div><span>id: </span>{{manifest.id}}</div>
-<div><span>name: </span>{{manifest.name}}</div>-->
-
+</mat-accordion>

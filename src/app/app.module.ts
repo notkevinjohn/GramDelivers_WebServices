@@ -25,6 +25,7 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MapComponent } from './map/map.component';
+import { OrderListComponent } from './order-list/order-list.component';
 
 @NgModule({
   imports:
@@ -52,7 +53,8 @@ import { MapComponent } from './map/map.component';
     VehiclesComponent,
     OrderDetailComponent,
     MessagesComponent,
-    MapComponent
+    MapComponent,
+    OrderListComponent
   ],
   providers: [
     MarkerService,
