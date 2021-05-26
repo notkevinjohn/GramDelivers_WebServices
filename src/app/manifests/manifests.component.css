@@ -1,0 +1,33 @@
+.manifests {
+    min-width: 300px;
+}
+
+.circle {
+    width: 10%;
+    border-radius: 50%;
+    background: #680E0E;
+    line-height: 0;
+
+    position: relative;
+    margin: 0 5px 0 0;
+}
+
+.circle::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.circle-txt {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+
+    font-family: arial, sans-serif;
+    font-weight: bold;
+}
+
+.spacer {
+    margin: 0 5px 0 0;
+}

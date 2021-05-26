@@ -1,14 +1,15 @@
 <mat-accordion multi>
-  <mat-expansion-panel *ngFor="let manifest of manifests">
+  <mat-expansion-panel *ngFor="let manifest of manifests" class="manifests">
     <app-order-list [orders]="manifest.orders"></app-order-list>
     <mat-expansion-panel-header>
-      <mat-panel-title>
-	{{ manifest.file_name }}
-      </mat-panel-title>
       <mat-panel-description>
-	Manifest {{ manifest.id }}
-	<mat-icon>list</mat-icon>
+	{{ manifest.file_name }}
       </mat-panel-description>
+	<span class="circle">
+	  <span class="circle-txt">{{ manifest.orders.length }}
+	  </span>
+	</span>
+	<mat-icon class="spacer">list</mat-icon>
     </mat-expansion-panel-header>
   </mat-expansion-panel>
 </mat-accordion>

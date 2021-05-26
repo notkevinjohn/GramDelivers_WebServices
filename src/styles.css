@@ -1,6 +1,6 @@
 /* Application-wide Styles */
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background: #000000; }
 
 h1 {
   color: #369;
