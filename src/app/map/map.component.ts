@@ -1,22 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import * as L from 'leaflet';
 import { MarkerService } from '../marker.service';
-import { ShapeService } from '../shape.service';
-
-const iconRetinaUrl = 'assets/marker-icon-2x.png';
-const iconUrl = 'assets/marker-icon.png';
-const shadowUrl = 'assets/marker-shadow.png';
-const iconDefault = L.icon({
-  iconRetinaUrl,
-  iconUrl,
-  shadowUrl,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  tooltipAnchor: [16, -28],
-  shadowSize: [41, 41]
-});
-L.Marker.prototype.options.icon = iconDefault;
 
 @Component({
   selector: 'app-map',
@@ -25,7 +9,6 @@ L.Marker.prototype.options.icon = iconDefault;
 })
 export class MapComponent implements AfterViewInit {
   private map;
-  private states;
   
   private initMap(): void {
     this.map = L.map('map', {
@@ -43,8 +26,7 @@ export class MapComponent implements AfterViewInit {
 }
 
 constructor(
-  private markerService: MarkerService,
-  private shapeService: ShapeService
+  private markerService: MarkerService
 ) { }
 
 private highlightFeature(e) {
@@ -71,33 +53,9 @@ private resetFeature(e) {
   });
 }
 
-private initStatesLayer() {
-  const stateLayer = L.geoJSON(this.states, {
-    style: (feature) => ({
-      weight: 3,
-      opacity: 0.5,
-      color: '#008f58',
-      fillOpacity: 0.8,
-      fillColor: '#6DB65B'
-    }),
-    onEachFeature: (feature, layer) => (
-      layer.on({
-	mouseover: (e) => (this.highlightFeature(e)),
-	mouseout: (e) => (this.resetFeature(e)),
-      })
-    )
-  });
-  this.map.addLayer(stateLayer);
-  stateLayer.bringToBack();
-}
-
   ngAfterViewInit(): void {
     this.initMap();
-    this.markerService.makeOrderMarkers(this.map);
-    this.shapeService.getStateShapes().subscribe(states => {
-      this.states = states;
-//      this.initStatesLayer();
-    });
+    this.markerService.saveMap(this.map);
   }
 
 }

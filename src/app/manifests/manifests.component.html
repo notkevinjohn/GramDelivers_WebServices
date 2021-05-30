@@ -1,5 +1,7 @@
 <mat-accordion multi>
-  <mat-expansion-panel *ngFor="let manifest of manifests" class="manifests">
+  <mat-expansion-panel *ngFor="let manifest of manifests"
+		       (click)="onSelect(manifest)"
+		       class="manifests">
     <app-order-list [orders]="manifest.orders"></app-order-list>
     <mat-expansion-panel-header>
       <mat-panel-description>

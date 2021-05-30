@@ -10,4 +10,6 @@ export interface Order {
   requested_dropoff_longtiude: number;
   requested_dropoff_latitude: number;
   assigned_route: string;
+  pickup_marker?: Object;
+  dropoff_marker?: Object;
 }
