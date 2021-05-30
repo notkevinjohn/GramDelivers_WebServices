@@ -16,55 +16,66 @@ export class MarkerService {
   ) { }
 
   markerMap = new Map();
-  
-  markerHtmlStyle = `
-  background-color: #680E0E;
-  width: 3rem;
-  height: 3rem;
-  display: block;
-  left: -1.5rem;
-  top: -1.5rem;
-  position: relative;
-  border-radius: 3rem 3rem 0;
-  transform: rotate(45deg);
-  border: 1px solid #FFFFFF`
-  
-  icon = L.divIcon({
-    iconAnchor:   [0, 24],
-    popupAnchor:  [0, -36],
-    labelAnchor:  [-6, 0],
-    className:    "hued-pin",
-    html: `<span style="${this.markerHtmlStyle}" />`
-});    
 
+  purpleIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+  redIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+  greenIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+  blueIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+  
   saveMap(map: L.map): void {
     this.appMap = map;
   }
   
   addOrders(orders: Order[]): void {
-
-    console.log(orders.length);
-    console.log(orders);
-    
     for (var counter = 0; counter < orders.length; counter++){
 
       const dropLat = orders[counter].requested_dropoff_latitude;
       const dropLon = orders[counter].requested_dropoff_longtiude;
-      console.log(dropLat, dropLon);
       const pickLat = orders[counter].requested_pickup_latitude;
       const pickLon = orders[counter].requested_pickup_longtiude;
-      console.log(pickLat, pickLon);
       
-      const dropoff = L.marker([dropLat, dropLon], {icon: this.icon} ).addTo(this.appMap);
-      const pickup = L.marker([pickLat, pickLon], {icon: this.icon} ).addTo(this.appMap);
+      const dropoff = L.marker([dropLat, dropLon], {icon: this.redIcon} ).addTo(this.appMap);
+      this.markerMap.set(orders[counter], dropoff);
+
+      const pickup = L.marker([pickLat, pickLon], {icon: this.purpleIcon} ).addTo(this.appMap);
+      this.markerMap.set(orders[counter], pickup);
 
       /*
        const circle = L.circleMarker([lat, lon], {
 	  radius: 9
 
-
        	marker.bindPopup(this.popupService.makePopup(c.properties));
-
        */
     }
   }

@@ -9,6 +9,10 @@ import { Order } from '../order';
 export class OrderListComponent implements OnInit {
 
   @Input() orders?: Order[];
+
+  onSelect(order: Order): void {
+
+  }
   
   constructor() { }
 
