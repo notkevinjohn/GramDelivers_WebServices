@@ -15,12 +15,13 @@ export class OrdersComponent implements OnInit {
 
   onSelect(order: Order): void {
     this.selectedOrder = order;
-    this.messageService.add(`OrdersComponent: Selected order job_number=${order.job_number}`);
+    this.orderService.select(order);
   }
 
   getOrders(): void {
     this.orderService.getOrders()
     .subscribe(orders => this.orders = orders);
+    this.messageService.add("tsete");
   }
     
   constructor(

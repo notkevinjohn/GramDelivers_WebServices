@@ -8,16 +8,11 @@
 <mat-grid-list cols="4">
   <mat-grid-tile class="manifests" [colspan]=1 [rowspan]=2>
    <app-manifests></app-manifests>
-<!--    <app-orders></app-orders>-->
   </mat-grid-tile>
   <mat-grid-tile class="maps" [colspan]=2 [rowspan]=2>
-    <app-map></app-map>
+    <app-map></app-map><app-messages class="messages"></app-messages>
   </mat-grid-tile>
   <mat-grid-tile class="vehicles" [colspan]=1 [rowspan]=2>
     <app-vehicles></app-vehicles>
   </mat-grid-tile>
-<!--  <mat-grid-tile class="orders" [colspan]=2 [rowspan]=1>
-    <div>ORDER DETAILS</div>
-    <app-messages></app-messages>
-  </mat-grid-tile>-->
 </mat-grid-list>

@@ -8,7 +8,13 @@ import { MessageService } from './message.service';
   providedIn: 'root'
 })
 export class OrderService {
+  public selected?: Order;
 
+  select(order: Order) {
+    this.selected = order;
+//    this.messageService.add('selected order');
+  }
+  
   getOrders(): Observable<Order[]> {
     const orders = of(ORDERS);
     this.messageService.add('OrderService: fetched orders');

@@ -1,5 +1,8 @@
 <ul class="orders">
-  <li *ngFor="let order of orders" (click)="onSelect(order)">
+  <li *ngFor="let order of orders"
+      (click)="onSelect(order)"
+      [class.selected]="order === selectedOrder"
+      >
     <span class="badge">{{ order.job_number }}</span> {{ order.contact_name }}
   </li>
 </ul>

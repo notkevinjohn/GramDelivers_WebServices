@@ -7,12 +7,18 @@
     <div><span>id: </span>{{vehicle.id}}</div>
   </mat-card-content>
     <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-      <mat-button-toggle value="red">red</mat-button-toggle>
-      <mat-button-toggle value="green">green</mat-button-toggle>
-      <mat-button-toggle value="blue">blue</mat-button-toggle>
+      <mat-button-toggle value="red">
+	<img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png"/>
+      </mat-button-toggle>
+      <mat-button-toggle value="green">
+	<img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png"/>
+      </mat-button-toggle>
+      <mat-button-toggle value="blue">
+	<img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png"/>
+      </mat-button-toggle>
     </mat-button-toggle-group>
 
-<!--  <mat-card-actions>
+<mat-card-actions>
     <button mat-raised-button color="primary">Assign</button>
-  </mat-card-actions>-->
+  </mat-card-actions>
 </mat-card>

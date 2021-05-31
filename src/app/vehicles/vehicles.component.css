@@ -6,3 +6,40 @@
 mat-button-toggle-group {
   margin-left: 12px;
 }
+
+/*.red.circle{
+    background: #CC2A3D;
+}*/
+
+.green {
+    background: #25AC22;
+}
+
+.blue{
+    background: #3086CC;
+}
+
+.circle {
+    width: 20px;
+    border-radius: 50%;
+    line-height: 0;
+    background: #CC2A3D;
+
+    position: relative;
+}
+
+.circle::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.circle-txt {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+
+    font-family: arial, sans-serif;
+    font-weight: bold;
+}
